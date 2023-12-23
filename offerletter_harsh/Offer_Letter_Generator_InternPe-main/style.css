@@ -1,0 +1,192 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: medium;
+  text-align: justify;
+  user-select: none;
+  background: linear-gradient(to right, #fffff3, #ffec8b);
+}
+
+#offer_letter_form {
+  margin: auto;
+  width: 30%;
+  font-size: medium;
+  background: linear-gradient(to right, #ffd700, #ffec8b);
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+#offer_letter_form .form_title {
+  margin: 2%;
+  padding: 2%;
+}
+
+#offer_letter_form div {
+  margin: 5%;
+}
+
+#offer_letter_form div .lbl {
+  font-size: small;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#offer_letter_form div .inp {
+  padding: 1.5%;
+  margin-top: 1.5%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#offer_letter_form .btn_generate {
+  background: linear-gradient(to right, #000000, #000000);
+  color: rgb(253, 236, 0);
+  border: none;
+  padding: 2%;
+  margin-left: 5%;
+  margin-top: 5%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+#offer_letter_form .btn_generate:hover {
+  background-color: #000000;
+  transform: scale(1.05);
+}
+
+#currentDate {
+  margin-left: 20px;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
+.print {
+  width: 50%;
+  margin: auto;
+  display: none;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.print .btn_print {
+  margin-top: 2%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 2%;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.print .btn_print:hover {
+  background-color: red;
+  color: rgb(255, 255, 255);
+}
+
+#offer_letter {
+  width: 50%;
+  border: 5px solid #000000;
+  background: linear-gradient(to right, #ffffff, #ffffff);
+  margin: auto;
+  padding: 2%;
+  display: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+#offer_letter header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2%;
+}
+
+#contact-info {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  color: #000000;
+  font-size: 0.5rem;
+}
+
+#offer_letter .flexdisplay {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+#offer_letter .flexdisplay h1 {
+  color: #5f7bcd;
+  line-height: 0;
+}
+
+#offer_letter .line {
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+}
+
+#offer_letter .content_container {
+  margin-top: 5%;
+  text-align: justify;
+}
+
+#offer_letter .content_container .content {
+  margin-top: 2%;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* Styles for printing */
+@media print {
+  #contact-info {
+    display: block;
+    line-height: 0.2;
+  }
+}
+
+/* to hide the title when printing */
+h3.form_title {
+  display: none;
+}
+
+#offer_letter .footer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+#offer_letter .footer .signatory,
+#offer_letter .footer .intern-info {
+  color: #000000;
+}
+
+#offer_letter .footer .signatory {
+  margin-bottom: 2px;
+}
+
+#offer_letter .footer .intern-info {
+  display: flex;
+  align-items: flex-end;
+}
+
+#offer_letter .footer .intern-info .intern-name {
+  margin-right: 2px;
+}

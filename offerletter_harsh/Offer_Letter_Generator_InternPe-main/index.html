@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offer Letter</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      
+      body {
+        background: linear-gradient(to right, #ffffff, #ffffff);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="offer_letter_form">
+      <form>
+        <h3 class="form_title">Fill the form to generate an Offer Letter.</h3>
+        <div>
+          <label for="salutation" class="lbl">Salutation:</label>
+          <select id="txtsalutation" class="inp">
+            <option value="">Select</option>
+            <option value="Mr.">Mr.</option>
+            <option value="Ms.">Ms.</option>
+            <option value="Mrs.">Mrs.</option>
+          </select>
+        </div>
+        <div>
+          <label for="name" class="lbl">Name:</label>
+          <input type="text" id="txtname" class="inp" />
+        </div>
+        <div>
+          <label for="email" class="lbl">Email:</label>
+          <input type="text" id="txtemail" class="inp" />
+        </div>
+        <div>
+          <label for="start_date" class="lbl">Date of Joining:</label>
+          <input type="date" id="txtsdate" class="inp" />
+        </div>
+        <div>
+          <label for="end_date" class="lbl">Date of Completion:</label>
+          <input type="date" id="txtedate" class="inp" />
+        </div>
+        <div>
+          <label for="domain" class="lbl">Domain:</label>
+          <input type="text" id="txtdomain" class="inp" />
+        </div>
+        <input
+          type="button"
+          value="Generate Offer Letter"
+          onclick="generate_offer_letter()"
+          class="btn_generate"
+        />
+      </form>
+    </div>
+
+    <br />
+
+    <div class="print" id="print_letter">
+      <center>
+        <input
+          type="button"
+          value="Print"
+          onclick="print_offer_letter()"
+          class="btn_print"
+        />
+      </center>
+    </div>
+
+    <br />
+
+    <div id="offer_letter">
+      <!-- Header Section with Logo and Contact Details -->
+      <header>
+        <div id="logo-container">
+          <img src="SuvidhaLogo.png" alt="SuvidhaLogo" width="180px" />
+        </div>
+        <div id="contact-info">
+          <p>
+            H.No. 1951, W.N.4, Khaperkheda, Saoner, Nagpur, Maharashtra, India
+          </p>
+          <p>Contact: (+91)08010996763</p>
+          <p style="color:purple"><a href ="mailto:info@suvidhafoundationedutech.org">info@suvidhafoundationedutech.org</a></p>
+          <p>
+            Website:
+            <a href="http://www.suvidhafoundationedutech.org" target="_blank"
+              >www.suvidhafoundationedutech.org</a
+            >
+          </p>
+        </div>
+        
+      </header>
+
+      <hr class="line" />
+      <div class="content_container">
+        <h4 style="margin-bottom: 5%">
+          <!-- Display the current date -->
+          <span id="currentDate" style="font-size: 0.5rem; margin-left: 20px;"></span><br />
+          <center><h3><u>Internship Offer Letter</u></h3></center>
+
+          <b>To,</b>
+          <label id="lblName"></label>
+          <label id="lblname"></label>,
+        </h4>
+        <p class="content">
+          With reference to your interview, we are pleased to inform you that
+          you have been selected as 
+          <b><label id="lbldomain"></label> Intern"</b> intern in our NGO - "Suvidha
+          Mahila Mandal," with the following terms and conditions.
+        </p>
+        <ul>
+          <li class="content">
+            You will provide
+            <b><label id="lbldomain"></label> services and apart from  
+            internship you have to participate in the
+            fundraising tasks also at Suvidha Foundation</b> and deliver the effect of the work.
+          </li>
+          <li>
+            The internship period will be from
+            <b><label id="lblsdate"></label></b> to
+            <b><label id="lbledate"></label></b>.
+          </li>
+          <li>
+            Your work base station is work from home, and the workdays are six
+            days a week.
+          </li>
+          <li>
+           <b>It is an unpaid internship</b>. The certificate of completion will be given only if you invest 4 hours daily on all working
+            days. You must participate in the daily team meetings through Google Meet. Also, the letter holds no value without a
+            completion certificate from us with a unique identification number, which can be verified online.
+          </li>
+          <li>
+            During the internship period and thereafter, you will not give out to anyone in writing or by word of mouth or
+            otherwise particulars or details of work process, technical know-how, research carried out, security arrangements
+            and/or matters of confidential or secret nature which you may come across during your service in this organization.
+          </li>
+          <li>
+            In case of any misconduct which causes financial loss to the NGO or hurts its reputation and goodwill of the
+            organization, the management has the right to terminate any intern. In case of termination, the management will not
+            be issuing certificates to the intern.
+          </li>
+          <li>
+            It is necessary for an intern to return all the organization belongings (login credentials, media created, and system) at
+            the time of leaving the organization. A clearance and experience certificate will be given after completing the
+            formalities. If any employee leaves the job/Internship without completing the formality, the organization will take
+            necessary action. All the software/courses/data developed by the interns or any employee for the Suvidha Mahila
+            Mandal are intellectual property of the organization & are protected by Indian Copyright Act. All the data generated
+            during the internship period, is the property right of organization and can be used for any purpose. In case of any
+            piracy, strict legal action will be taken by the organization against erring persons. No information or source codes or
+            course curriculum or business secrets or financial position or other details of organization shall be discussed among
+            friends or relatives or our competitors. Such leakage of information is likely to cause financial loss to the organization.
+            Hence, in such a case, the organization will be terminating the employee immediately and if required, further legal
+            action will be taken against that intern.
+          </li>
+        </ul></br>
+       
+      </div>
+    <div class="flexdisplay">
+      <div class="footer">
+        <div class="signatory">
+          <p><b>Mrs. Shobha Motghare</b></p>
+          <p><b>Secretary, Suvidha Mahila Mandal</b></p>
+        </div>
+        <div class="intern-info">
+          <div class="intern-name">
+            <b><label id="lblname"></label></b>
+          </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+</html>
